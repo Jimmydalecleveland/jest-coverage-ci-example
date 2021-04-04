@@ -13,5 +13,5 @@ test("duh", () => {
     rarity: "epic",
   });
 
-  expect(weapon).toMatchObject(expectedWeapon);
+  expect(weapon).toBe(expectedWeapon);
 });
