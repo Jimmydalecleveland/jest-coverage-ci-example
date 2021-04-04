@@ -6,11 +6,11 @@ const ARMOR_TYPES = ["light", "medium", "heavy"];
 function generateStat(rarity) {
   let stat = 0;
   if (rarity === "epic") {
-    stat = getRandomIntInRange(8, 20);
+    stat = getRandomInt(8, 20);
   } else if (rarity === "rare") {
-    stat = getRandomIntInRange(5, 15);
+    stat = getRandomInt(5, 15);
   } else {
-    stat = getRandomIntInRange(1, 10);
+    stat = getRandomInt(1, 10);
   }
   return stat;
 }
@@ -32,7 +32,9 @@ function generateBaseArmor() {
   };
 }
 
-function generateItem({ type, rarity }) {
+function generateItem(itemOptions = {}) {
+  const { type, rarity } = itemOptions;
+
   if (!type) {
     return null;
   }
