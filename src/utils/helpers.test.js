@@ -1,6 +1,6 @@
 const { getRandomInt } = require("./helper");
 
-test.skip("gets a random integer in a given range", () => {
+test("gets a random integer in a given range", () => {
   for (let i = 0; i < 20; i++) {
     const result = getRandomInt(3);
     expect(result).toBeGreaterThanOrEqual(0);
