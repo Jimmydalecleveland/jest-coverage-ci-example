@@ -1,6 +1,6 @@
 const { generateItem } = require("./generateItem");
 
-test("duh", () => {
+test("should create weapon object", () => {
   const expectedWeapon = {
     type: "weapon",
     rarity: "epic",
@@ -13,5 +13,5 @@ test("duh", () => {
     rarity: "epic",
   });
 
-  expect(weapon).toBe(expectedWeapon);
+  expect(weapon).toMatchObject(expectedWeapon);
 });
