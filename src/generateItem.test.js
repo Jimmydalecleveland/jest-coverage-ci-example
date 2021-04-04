@@ -1,6 +1,6 @@
 const { generateItem } = require("./generateItem");
 
-test("duh", () => {
+test("should create weapon object", () => {
   const expectedWeapon = {
     type: "weapon",
     rarity: "epic",
